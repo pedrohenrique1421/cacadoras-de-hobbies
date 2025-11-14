@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 30 30% 93%; /* Bege caloroso */
+    --foreground: 71 23% 25%; /* Verde escuro para texto */
+
+    --card: 0 0% 100%;
+    --card-foreground: 71 23% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 71 23% 25%;
+
+    --primary: 2 85% 90%; /* Rosa claro */
+    --primary-foreground: 71 23% 25%;
+
+    --secondary: 71 23% 43%; /* Verde oliva */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 2 60% 95%;
+    --muted-foreground: 71 15% 45%;
+
+    --accent: 354 48% 70%; /* Rosa escuro */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 2 40% 88%;
+    --input: 0 0% 100%;
+    --ring: 354 48% 70%;
+
+    --radius: 1rem;
+
+    /* Gradientes personalizados */
+    --gradient-primary: linear-gradient(135deg, hsl(2, 85%, 90%) 0%, hsl(354, 48%, 85%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(30, 30%, 93%) 0%, hsl(2, 85%, 95%) 100%);
+    
+    /* Sombras suaves */
+    --shadow-soft: 0 4px 20px rgba(213, 139, 145, 0.15);
+    --shadow-card: 0 2px 12px rgba(123, 133, 84, 0.08);
+    
+    /* Animações */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 71 23% 15%;
+    --foreground: 30 30% 93%;
+
+    --card: 71 23% 18%;
+    --card-foreground: 30 30% 93%;
+
+    --popover: 71 23% 18%;
+    --popover-foreground: 30 30% 93%;
+
+    --primary: 2 85% 90%;
+    --primary-foreground: 71 23% 15%;
+
+    --secondary: 71 23% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 71 15% 25%;
+    --muted-foreground: 30 20% 70%;
+
+    --accent: 354 48% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 71 15% 25%;
+    --input: 71 15% 25%;
+    --ring: 354 48% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-['Poppins',sans-serif];
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-['Poppins',sans-serif] font-semibold;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
