@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -39,13 +40,21 @@ All colors MUST be HSL.
     --radius: 1rem;
 
     /* Gradientes personalizados */
-    --gradient-primary: linear-gradient(135deg, hsl(2, 85%, 90%) 0%, hsl(354, 48%, 85%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(30, 30%, 93%) 0%, hsl(2, 85%, 95%) 100%);
-    
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(2, 85%, 90%) 0%,
+      hsl(354, 48%, 85%) 100%
+    );
+    --gradient-hero: linear-gradient(
+      180deg,
+      hsl(30, 30%, 93%) 0%,
+      hsl(2, 85%, 95%) 100%
+    );
+
     /* Sombras suaves */
     --shadow-soft: 0 4px 20px rgba(213, 139, 145, 0.15);
     --shadow-card: 0 2px 12px rgba(123, 133, 84, 0.08);
-    
+
     /* Animações */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -90,7 +99,12 @@ All colors MUST be HSL.
     @apply bg-background text-foreground font-['Poppins',sans-serif];
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-['Poppins',sans-serif] font-semibold;
   }
 }
@@ -99,22 +113,20 @@ All colors MUST be HSL.
   .gradient-primary {
     background: var(--gradient-primary);
   }
-  
+
   .gradient-hero {
     background: var(--gradient-hero);
   }
-  
+
   .shadow-soft {
     box-shadow: var(--shadow-soft);
   }
-  
+
   .shadow-card {
     box-shadow: var(--shadow-card);
   }
-  
+
   .transition-smooth {
     transition: var(--transition-smooth);
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
